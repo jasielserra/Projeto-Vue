@@ -7,7 +7,7 @@ export default {
   name: "Picture",
   data(){
     return {
-      avatar: "/img/avatar.png",
+      avatar: "/img/jasi.jpeg",
       descricao: "Jasiel de Cristo Serra",
     }
   }
