@@ -4,9 +4,15 @@
     <p v-else>Estou em busca de novas oportunidades!</p>
     <p>Utilizo as seguintes tecnologias:</p>
     <ul>
-      <li>Python</li>
-      <li>Django Framework</li>
-      <li>Vue-JS</li>
+      <li v-for="(technology, index) in backend_technologies" v-bind:key="index">
+        {{ technology }}
+      </li>
+    </ul>
+    <p>Utilizo as seguintes tecnologias para front-end:</p>
+    <ul>
+      <li v-for="technology in frontend_techonologies" :key="technology.id">
+        {{ technology.language }}
+      </li>
     </ul>
     <div>
       <button @click="showEmail">{{ textoBotao }}</button>
@@ -28,7 +34,13 @@ export default {
       mostrar_email:false,
       email: 'jasiel_serra@hotmail.com',
       meu_link:"https://github.com/jasielserra",
-      textoBotao: "Mostrar e-mail"
+      textoBotao: "Mostrar e-mail",
+      backend_technologies: ['JavaScript','Python','Django Frameworks'],
+      frontend_techonologies: [
+        {id: 1, language: 'HTML'},
+        {id: 2, language: 'CSS'},
+        {id: 3, language: 'Vue'},
+      ]
     }
   },
   methods: {
@@ -36,12 +48,19 @@ export default {
       this.mostrar_email = !this.mostrar_email
       if(!this.mostrar_email){
         this.textoBotao = 'Mostrar e-mail'
-      }else{
+      }
+      else{
         this.textoBotao = 'Esconder e-mail'
       }
     }
   }
 }
 </script>
+
+<style>
+  .paragrafo-pai {
+    color: red;
+  }
+</style>
 
 

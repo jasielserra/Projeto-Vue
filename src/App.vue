@@ -2,7 +2,7 @@
   <div>
     <Header/>
     <PrimeiroComponente/>
-    <p>O dado de app é: {{testando}} </p>
+    <p class="paragrafo-pai">O dado de app é: {{testando}} </p>
     <LifeCycle/>
     <Pessoa/>
   </div>
@@ -40,5 +40,4 @@
   .teste {
      background-color: black;
   }
-
 </style>
