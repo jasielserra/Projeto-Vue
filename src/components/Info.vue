@@ -2,10 +2,10 @@
   <div>
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades!</p>
-    <p>Utilizo as seguintes tecnologias:</p>
+    <p>Utilizo as seguintes tecnologias para backend:</p>
     <ul>
       <li v-for="(technology, index) in backend_technologies" v-bind:key="index">
-        {{ technology }}
+        {{index}} - {{ technology }}
       </li>
     </ul>
     <p>Utilizo as seguintes tecnologias para front-end:</p>
