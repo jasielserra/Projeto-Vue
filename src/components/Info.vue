@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>{{ email }}</p>
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades!</p>
     <p>Utilizo as seguintes tecnologias para backend:</p>
@@ -28,11 +29,13 @@ import Picture from "@/components/Picture";
 export default {
   name: "Info",
   components: {Picture},
+  props: {
+    email: String,
+    esta_trabalhando: Boolean
+  },
   data(){
     return {
-      esta_trabalhando: true,
       mostrar_email:false,
-      email: 'jasiel_serra@hotmail.com',
       meu_link:"https://github.com/jasielserra",
       textoBotao: "Mostrar e-mail",
       backend_technologies: ['JavaScript','Python','Django Frameworks'],
