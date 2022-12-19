@@ -14,13 +14,13 @@ export default {
     setTimeout(() => {
       this.nome = "Jasiel"
         }, 1000);
-    this.lifeCycle();
+    this.lifeCycle()
   },
   mounted() {
     setTimeout(() => {
       this.nome = "Serra"
         }, 2000);
-    this.lifeCycle();
+    this.lifeCycle()
   },
   methods: {
     lifeCycle(){
