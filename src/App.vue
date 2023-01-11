@@ -2,6 +2,7 @@
   <div>
     <Header :esta_logado="false" />
     <PrimeiroComponente/>
+    <HelloWorld msg="Vamos aprender Vue JS"/>
     <p class="paragrafo-pai">O dado de app é: {{testando}} </p>
     <LifeCycle/>
     <Pessoa/>
@@ -13,19 +14,23 @@
   import LifeCycle from './components/LifeCycle.vue'
   import Pessoa from "@/components/Pessoa";
   import Header from "@/components/Header";
+  import HelloWorld from "@/components/HelloWorld";
     export default {
       name: 'App',
       components:{
         Header,
         Pessoa,
         PrimeiroComponente,
-        LifeCycle
+        LifeCycle,
+        HelloWorld
       },
       data(){
         return {
-          testando: "Testing"
+          testando: "Testing",
+
         }
-      }
+      },
+
     }
 </script>
 
