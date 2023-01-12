@@ -24,7 +24,6 @@ export default {
   methods: {
     addProduct(){
       this.$store.commit('addProduct', this.product)
-      this.Incart = true;
     },
     removeProduct(){
       this.$store.commit('removeProduct', this.product.id)

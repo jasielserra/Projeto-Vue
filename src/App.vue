@@ -1,11 +1,13 @@
 <template>
   <div>
     <Header :esta_logado="false" />
+    <pre> {{ $store.getters.total }}</pre>
     <AppProducts/>
     <PrimeiroComponente/>
     <HelloWorld msg="Vamos aprender Vue JS"/>
     <p class="paragrafo-pai">O dado de app é: {{testando}} </p>
     <LifeCycle/>
+
     <button @click="updateUser()">
        Atualizar Perfil
     </button>
