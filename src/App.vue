@@ -45,7 +45,8 @@
                last_name: 'Nabuco',
                email: 'joaquim.nabuco@uol.com.br'
         }
-        this.$store.commit('storeUser', newUser)
+      //  this.$store.commit('storeUser', newUser)
+          this.$store.dispatch('storeUser', newUser)
     }
   },
       created() {

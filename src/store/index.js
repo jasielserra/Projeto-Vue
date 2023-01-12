@@ -47,7 +47,9 @@ export default createStore({
 
     },
     actions:{
-
+        storeUser(context, data){
+            context.commit('storeUser', data);
+        }
     },
     modules:{
 
