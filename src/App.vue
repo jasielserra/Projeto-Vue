@@ -46,7 +46,9 @@
                email: 'joaquim.nabuco@uol.com.br'
         }
       //  this.$store.commit('storeUser', newUser)
-          this.$store.dispatch('storeUser', newUser)
+          this.$store.dispatch('storeUser', newUser).then(() =>{
+            console.log('Terminou com sucesso');
+          })
     }
   },
       created() {

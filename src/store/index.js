@@ -47,9 +47,16 @@ export default createStore({
 
     },
     actions:{
-        storeUser(context, data){
-            context.commit('storeUser', data);
-        }
+        storeUser({commit}, data){
+            //rotina assincrona
+            // AJAX
+            return new Promise((resolve) =>{
+                setTimeout( () =>{
+                    commit('storeUser', data);
+                    resolve()
+                }, 3000)
+            })
+        },
     },
     modules:{
 
