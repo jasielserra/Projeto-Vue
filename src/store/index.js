@@ -14,7 +14,9 @@ export default createStore({
 
     },
     mutations: {
-
+        storeUser(state, data){
+            state.user = data;
+        },
     },
     actions:{
 

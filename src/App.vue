@@ -5,6 +5,9 @@
     <HelloWorld msg="Vamos aprender Vue JS"/>
     <p class="paragrafo-pai">O dado de app é: {{testando}} </p>
     <LifeCycle/>
+    <button @click="updateUser()">
+       Atualizar Perfil
+    </button>
     <Pessoa/>
   </div>
 </template>
@@ -30,7 +33,19 @@
 
         }
       },
+      methods:{
+        updateUser(){
+          const newUser = {
+               first_name: 'Joaquim',
+               last_name: 'Nabuco',
+               email: 'joaquim.nabuco@uol.com.br'
+        }
+        this.$store.commit('storeUser', newUser)
+    }
+  },
+      created() {
 
+      }
     }
 </script>
 
