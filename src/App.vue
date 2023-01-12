@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header :esta_logado="false" />
+    <AppProducts/>
     <PrimeiroComponente/>
     <HelloWorld msg="Vamos aprender Vue JS"/>
     <p class="paragrafo-pai">O dado de app é: {{testando}} </p>
@@ -18,9 +19,11 @@
   import Pessoa from "@/components/Pessoa";
   import Header from "@/components/Header";
   import HelloWorld from "@/components/HelloWorld";
+  import AppProducts from "@/components/Products/AppProducts";
     export default {
       name: 'App',
       components:{
+        AppProducts,
         Header,
         Pessoa,
         PrimeiroComponente,
